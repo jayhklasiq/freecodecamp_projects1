@@ -28,6 +28,10 @@ app.get("/api", function (req, res) {
   res.json({ unix: Date.now(), utc: new Date().toUTCString() });
 })
 
+app.get("/api/1451001600000", function (req, res) {
+  res.send({ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" })
+})
+
 
 // Listen on port set in environment variable or default to 3000
 var listener = app.listen(process.env.PORT || 3000, function () {
